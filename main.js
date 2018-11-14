@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
   function countTime() {
     let today = new Date();
     let ms = (today - startDate) % 86400000;
-    hour.innerText = Math.floor(ms / 3600000);
-    min.innerText = Math.floor(ms % 3600000 / 60000);
-    second.innerText = Math.floor(ms % 3600000 % 60000 / 1000);
+    let h = Math.floor(ms / 3600000);
+    hour.innerText = h >= 10 ? h : `0${h}`;
+    let m = Math.floor(ms % 3600000 / 60000);
+    min.innerText = m >= 10 ? m : `0${m}`;
+    let s = Math.floor(ms % 3600000 % 60000 / 1000);
+    second.innerText = s >= 10 ? s : `0${s}`;
   }
 
   setInterval(countTime, 1000);
