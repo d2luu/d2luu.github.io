@@ -224,8 +224,6 @@ img {
 
 /* ===== Timer ===== */
 .timer {
-  width: fit-content;
-  place-self: center;
   text-align: center;
   padding: 1rem 2rem;
   /* opaque background so connector is hidden behind (like family tree lines) */
