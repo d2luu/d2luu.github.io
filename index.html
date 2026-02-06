@@ -1,50 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="main.js"></script>
-  <title>BEEN TOGETHER</title>
+  <script src="main.js" defer></script>
+  <title>Been Together — Love Counter</title>
 </head>
 <body>
-  
-  <h1 class="title">LOVE</h1>
+  <main class="page">
+    <header class="header">
+      <h1 class="title">Been Together</h1>
+    </header>
 
-  <div class="box">
+    <section class="card">
+      <svg class="love-connector" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <!-- base lines -->
+        <path class="love-connector__base" d="M50 16 V64" />
+        <path class="love-connector__base" d="M50 64 C45 70 40 75 32 82" />
+        <path class="love-connector__base" d="M50 64 C55 70 60 75 68 82" />
 
-    <div class="about">
-      <div class="info">
-          <img src="luu.jpg" class="avatar">
-          <div class="details">
-            <p class="name">Dao Danh Luu</p>
-            <p class="born">26.10.1994</p>
+        <!-- flowing highlight -->
+        <path class="love-connector__flow" d="M50 16 V64" />
+        <path class="love-connector__flow" d="M50 64 C45 70 40 75 32 82" />
+        <path class="love-connector__flow" d="M50 64 C55 70 60 75 68 82" />
+      </svg>
+
+      <div class="couple">
+        <article class="person person--left">
+          <div class="person__info">
+            <p class="person__name">Dao Danh Luu</p>
+            <p class="person__birth">26.10.1994</p>
           </div>
-        </div>
-
-        <div class="heart-box">
-          <img src="heart.svg" class="heart">
-        </div>
-    
-        <div class="info">
-          <img src="hoa.jpg" class="avatar">
-          <div class="details">
-            <p class="name">Nguyen Thi Hoa</p>
-            <p class="born">29.10.1995</p>
+          <div class="person__avatar-wrap">
+            <img src="luu.jpg" alt="Dao Danh Luu" class="person__avatar">
           </div>
+        </article>
+
+        <div class="heart-wrap" aria-hidden="true">
+          <img src="heart.svg" alt="" class="heart">
         </div>
-    </div>
 
-    <div class="time">
-      <h2 class="days"><span>00</span>&nbsp;DAYS</h2>
-      <p class="sup-time">
-        <span class="hour">10</span>:<span class="min">20</span>:<span class="second">16</span>
-      </p>
-    </div>
+        <article class="person person--right">
+          <div class="person__info">
+            <p class="person__name">Nguyen Thi Hoa</p>
+            <p class="person__birth">29.10.1995</p>
+          </div>
+          <div class="person__avatar-wrap">
+            <img src="hoa.jpg" alt="Nguyen Thi Hoa" class="person__avatar">
+          </div>
+        </article>
+      </div>
 
-    <p class="say-thank">Thank you for your love !</p>
-  </div>
+      <div class="timer">
+        <div class="timer__days">
+          <span class="timer__number days-value">00</span>
+          <span class="timer__label">日</span>
+        </div>
+        <div class="timer__hms">
+          <span class="timer__number hour-value">00</span>
+          <span class="timer__sep">:</span>
+          <span class="timer__number min-value">00</span>
+          <span class="timer__sep">:</span>
+          <span class="timer__number second-value">00</span>
+        </div>
+      </div>
 
+      <div class="kids">
+        <div class="kids__grid">
+          <article class="kid">
+            <div class="kid__avatar-wrap">
+              <img src="Mit.jpg" alt="Mít" class="kid__avatar">
+            </div>
+            <div class="kid__info">
+              <p class="kid__name">Mít</p>
+              <p class="kid__birth">2023.06.03</p>
+            </div>
+          </article>
+          <article class="kid">
+            <div class="kid__avatar-wrap">
+              <img src="Tit.JPG" alt="Tít" class="kid__avatar">
+            </div>
+            <div class="kid__info">
+              <p class="kid__name">Tít</p>
+              <p class="kid__birth">2025.04.05</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </section>
+  </main>
 </body>
 </html>
